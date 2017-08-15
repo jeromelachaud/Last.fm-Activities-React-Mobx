@@ -4,6 +4,7 @@ import { inject, observer } from 'mobx-react';
 import { fetchRecentTracks } from '../actions/action-creators';
 import PropTypes from 'prop-types';
 import _map from 'lodash/map';
+import {RecentTrackWrapper} from '../styles';
 
 @inject('lastfmStore')
 @observer
@@ -26,9 +27,9 @@ class RecentTracks extends React.Component {
     ));
 
     return (
-      <div>
+      <RecentTrackWrapper>
         {RecentTrackElement}
-      </div>
+      </RecentTrackWrapper>
     )
   }
 }

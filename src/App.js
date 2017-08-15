@@ -1,14 +1,13 @@
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import RecentTracks from './components/RecentTracks.js';
+import {StyledApp} from './styles';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <StyledApp>
         <RecentTracks />
-      </div>
+    </StyledApp>
     );
   }
 }
