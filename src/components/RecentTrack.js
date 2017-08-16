@@ -1,6 +1,12 @@
 import React from 'react';
 import lastfm_placeholder from '../assets/cover-album-placeholder.svg';
 import PropTypes from 'prop-types';
+import {
+  RecentTrackLink,
+  RecentTrackImage,
+  RecentTrackInfoList,
+  RecentTrackDate
+} from '../styles';
 
 class RecentTrack extends React.Component {
 
@@ -23,7 +29,7 @@ class RecentTrack extends React.Component {
     let dateElement;
     if (date) {
       dateElement = (
-        <div>{date['#text']}</div>
+        <RecentTrackDate>{date['#text']}</RecentTrackDate>
       );
     }
     let imageSource;
@@ -34,18 +40,18 @@ class RecentTrack extends React.Component {
     }
 
     return (
-      <a
+      <RecentTrackLink
         href={url}>
-        <img
+        <RecentTrackImage
           src={imageSource}
           alt={name} />
-        <ul>
+        <RecentTrackInfoList>
           <li><strong>{artist['#text']}</strong></li>
           <li>{name}</li>
           <li><em>{album['#text']}</em></li>
           {dateElement}
-        </ul>
-      </a>
+        </RecentTrackInfoList>
+      </RecentTrackLink>
     );
   }
 }
