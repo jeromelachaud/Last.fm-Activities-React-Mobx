@@ -14,6 +14,13 @@ class lastfmStore {
   @computed get trackCount() {
     return this.recentTracks.length;
   }
+
+  @observable user = ''
+
+  @action setUser = (user) => {
+    this.user = user;
+  }
+
 }
 
 const store = new lastfmStore();

@@ -1,4 +1,4 @@
-import lastfmStore from '../stores/lastfmStore'
+etimport lastfmStore from '../stores/lastfmStore'
 
 import axios from 'axios';
 import {
@@ -29,7 +29,6 @@ export function fetchUser() {
   });
   getUserInfo()
   .then((response) => {
-    lastfmStore.setUser(response.data.user.name)
-    debugger;
+    lastfmStore.addUser(response.data.user)
   });
 }

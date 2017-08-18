@@ -9,13 +9,11 @@ import { RecentTrackWrapper } from '../styles';
 @inject('lastfmStore')
 @observer
 class RecentTracks extends React.Component {
-
   componentWillMount() {
     fetchRecentTracks();
   }
 
   render() {
-
     const {
       lastfmStore
     } = this.props;
