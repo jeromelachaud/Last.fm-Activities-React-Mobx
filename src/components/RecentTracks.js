@@ -1,10 +1,10 @@
 import React from 'react';
-import RecentTrack from './RecentTrack.js';
 import { inject, observer } from 'mobx-react';
 import { fetchRecentTracks } from '../actions/action-creators';
-import PropTypes from 'prop-types';
+import RecentTrack from './RecentTrack.js';
 import _map from 'lodash/map';
 import { RecentTrackWrapper } from '../styles';
+import PropTypes from 'prop-types';
 
 @inject('lastfmStore')
 @observer

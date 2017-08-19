@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider} from 'mobx-react';
+import AppRouter from './AppRouter';
 import registerServiceWorker from './registerServiceWorker';
+import './index.css';
 
-import {
-  Provider
-} from 'mobx-react';
 import lastfmStore from './stores/lastfmStore'
 
 const providedApp = (
   <Provider lastfmStore={lastfmStore}>
-    <App />
+    <AppRouter />
   </Provider>
 )
 

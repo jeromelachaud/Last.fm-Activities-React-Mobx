@@ -15,12 +15,17 @@ class lastfmStore {
     return this.recentTracks.length;
   }
 
-  @observable user = ''
+  @observable user = '';
 
   @action setUser = (user) => {
     this.user = user;
   }
 
+  @observable topArtists = [];
+
+  @action addArtist = (artists) => {
+    this.topArtists.push(...artists);
+  }
 }
 
 const store = new lastfmStore();

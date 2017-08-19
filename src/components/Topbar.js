@@ -1,11 +1,7 @@
 import React from 'react';
-import { inject, observer } from 'mobx-react';
 import Menu from './Menu';
 import Logo from './Logo';
-import {
-  TopBarWrapper,
-  LogoWrapper
-} from '../styles';
+import { TopBarWrapper, LogoWrapper } from '../styles';
 
 class TopBar extends React.Component {
   render() {

@@ -7,6 +7,36 @@ export const StyledApp = glamorous.div({
   fontSize: '2rem'
 });
 
+export const TopBarWrapper = glamorous.div({
+  position: 'fixed',
+  display: 'flex',
+  width: '100%',
+  height: '10rem',
+  zIndex: '2',
+  backgroundColor: '#000'
+});
+
+export const LogoWrapper = glamorous.span({
+  width: '5rem',
+  height: '5rem',
+  alignSelf: 'center',
+  margin: '2rem'
+});
+
+export const MenuWrapper = glamorous.ul({
+  display: 'flex',
+  flexGrow: '1',
+  alignItems: 'center'
+});
+
+export const MenuItem = glamorous.li({
+  padding: '0 2rem 0 0',
+  cursor: 'pointer',
+  fontWeight: 'bold',
+  fontSize: '1.75rem',
+  textTransform: 'uppercase'
+});
+
 export const RecentTrackWrapper = glamorous.div({
   width: '30rem',
   margin: '0 auto',
@@ -57,69 +87,53 @@ export const RecentTrackDate = glamorous.li({
   fontSize: '80%'
 });
 
-export const TopBarWrapper = glamorous.div({
-  position: 'fixed',
-  display: 'flex',
-  width: '100%',
-  height: '10rem',
-  zIndex: '2',
-  backgroundColor: '#000'
+export const TopArtistsWrapper = glamorous.section({
+  maxWidth: '1500px',
+  margin: '0 auto',
+  padding: '10rem 0 0',
+  textAlign: 'center'
 });
 
-export const LogoWrapper = glamorous.span({
-  width: '5rem',
-  height: '5rem',
-  alignSelf: 'center',
-  margin: '2rem'
+export const TopArtistWrapper = glamorous.a({
+  display: 'inline-flex',
+  position: 'relative',
+  width: '300px',
+  margin: '0 2rem 2rem 0'
 });
 
-export const MenuWrapper = glamorous.ul({
-
+export const TopArtistInfoWrapper = glamorous.div({
+  position: 'absolute',
+  top:0, right:0, bottom:0, left:0,
   display: 'flex',
-  flexGrow: '1',
-  alignItems: 'center'
+  color: 'white',
+  backgroundColor: 'rgba(255, 255, 255, .5)',
 
-  // a {
-  //   cursor: pointer;
-  //   font-weight: bold;
-  //   font-size: 1.75rem;
-  //   text-transform: uppercase;
-  //   color: rgba(255,255,255,0.5);
-  //
-  //   &:hover,
-  //   &:active {
-  //     color: rgba(255,255,255,1);
-  //     transition: color .25s ease-in-out;
+  // &:hover {
+  //   background-color: rgba(0, 0, 0, 0);
+  //   & > div {
+  //     color: ${darkGrey};
   //   }
   // }
 });
 
-export const MenuItem = glamorous.li({
-  padding: '0 2rem 0 0'
+export const TopArtistInfo =  glamorous.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignSelf: 'center',
+  flexGrow: '1'
+});
+
+export const UserWrapper = glamorous.div({
+  position: 'fixed',
+  top: '9.5rem',
+  right: '0'
 });
 
 export const LinkUserWrapper = glamorous.li({
   display: 'flex',
   flexGrow: '1',
   flexDirection: 'row-reverse',
-  padding: '0 2rem 0 0',
-});
-
-
-export const UserWrapper = glamorous.div({
-  position: 'fixed',
-  top: '9.5rem',
-  right: '0'
-
-  // a {
-  //   text-transform: none;
-  // };
-});
-
-export const UserLink = glamorous.a({
-  display: 'inline-block',
-  margin: '5px auto',
-  backgroundColor: 'rgba(255, 255, 255, 1)'
+  padding: '0 2rem 0 0'
 });
 
 export const UserInfo = glamorous.ul({
@@ -127,4 +141,10 @@ export const UserInfo = glamorous.ul({
   padding: '1rem 0.7rem 0.7rem 0',
   textAlign: 'right',
   color: darkGrey
+});
+
+export const UserLink = glamorous.a({
+  display: 'inline-block',
+  margin: '5px auto',
+  backgroundColor: 'rgba(255, 255, 255, 1)'
 });

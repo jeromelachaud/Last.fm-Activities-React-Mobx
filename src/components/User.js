@@ -1,14 +1,10 @@
 import React from 'react';
 import moment from 'moment';
-import colorVariables from '../constants/styles-variables';
 import PropTypes from 'prop-types';
 import {
   UserLink,
   UserInfo
 } from '../styles';
-const {
-  darkGrey
-} = colorVariables;
 
 class User extends React.Component {
   render() {

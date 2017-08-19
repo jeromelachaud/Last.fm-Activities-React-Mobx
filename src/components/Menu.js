@@ -1,22 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 import User from './User';
-import { Link } from 'react-router-dom';
+import { fetchUser } from '../actions/action-creators';
 import language from '../language';
 import {
-  TopBarWrapper,
-  LogoWrapper,
   UserWrapper,
   MenuWrapper,
   MenuItem,
   LinkUserWrapper
 } from '../styles';
-import {
-  fetchUser
-} from '../actions/action-creators';
+import { css } from 'glamor';
 import PropTypes from 'prop-types';
 
 const menuLanguage = language.components.menu;
+const linkStyle = css({
+  cursor: 'pointer',
+  fontWeight: 'bold',
+  fontSize: '1.75rem',
+  textTransform: 'uppercase',
+  color: 'rgba(255,255,255,1)',
+
+  '&:hover, &:visited, &:active': {
+    color: 'rgba(255,255,255,0.5)',
+    transition: 'color .25s ease-in-out',
+  }
+})
+
 
 @inject('lastfmStore')
 @observer
@@ -51,22 +61,24 @@ class Menu extends React.Component {
       <MenuWrapper>
         <MenuItem>
           <Link
-            to="recent-tracks">
+            className={`${linkStyle}`}
+            to="/recent-tracks">
             {menuLanguage.recentTracks}
           </Link>
         </MenuItem>
         <MenuItem>
           <Link
-            to="top-artists">
+            className={`${linkStyle}`}
+            to="/top-artists">
             {menuLanguage.topArtists}
           </Link>
         </MenuItem>
           <LinkUserWrapper>
-            <Link
+            {/* <Link
               id="toggleUser"
               onClick={this.toggleUser}>
               {menuLanguage.userInfo}
-            </Link>
+            </Link> */}
           </LinkUserWrapper>
         {this.state.showUser ? userElement : null}
       </MenuWrapper>
