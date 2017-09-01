@@ -77,12 +77,6 @@ export const RecentTrackInfoList = glamorous.ul({
   lineHeight: '1.5',
 });
 
-export const RecentTrackInfoListItem = glamorous.ul({
-  padding: '.75rem 1rem',
-  width: '300px',
-  lineHeight: '1.5',
-});
-
 export const RecentTrackDate = glamorous.li({
   fontSize: '80%'
 });
